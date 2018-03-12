@@ -9,10 +9,68 @@
 [![Github Issues](https://img.shields.io/github/issues/tiagoporto/limit-lines.svg)](https://github.com/tiagoporto/limit-lines/issues)
 [![Github License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
 
-<%= project.description %>
+
+A tool for check and report lines by file.
+
+## Installation
+```
+$ npm i limit-lines
+```
+
+
+## Execute
+```
+$ limitline [options]
+```
+
+
+## Options
+
+### Path
+String, separate by comma
+Globby paths to scan
+```
+$ limitline --path './folder1/*, ./folder2/**/*'
+```
+
+### Ignore
+String, separate by comma
+Paths to ignore. Default: `./**/*`
+```
+$ limitline --path './**/*' --ignore './node_modules'
+```
+
+### Maxlines
+Integer
+Maximum lines by file. Default: 300
+```
+$ limitline --maxlines 450
+```
+
+### Minlines
+Integer
+Minimun lines by file. Default: 1
+```
+$ limitline --minlines 1
+```
+
+### Maxerrors
+Integer
+Maximum errors accept. Default: 0
+```
+$ limitline --maxerrors 3
+```
+
+### Version
+Output the version number
+Alias `-v`
+
+```
+$ limitline --version
+```
 
 
 
 ## License
 
-Limit Lines is released under the terms of the [https://github.com/tiagoporto/limit-lines/blob/master/LICENSE](LICENSE).
+Limit Lines is released under the terms of the [MIT license](https://github.com/tiagoporto/limit-lines/blob/master/LICENSE).
