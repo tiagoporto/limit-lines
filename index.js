@@ -1,21 +1,35 @@
+#!/usr/bin/env node
 const countLinesInFile = require('count-lines-in-file')
 const globby = require('globby')
 const path = require('path')
 const chalk = require('chalk')
-const maxErrors = 3
-const maxlinesByFile = 250;
+const program = require('commander')
 
-(async () => {
-  const paths = await globby([
-    './**/*',
-    // './imports/**/*',
-    // './packages/**/*',
-    // './client/**/*',
-    // './server/**/*',
-    '!./**/*.{png,jpg}',
-    '!./node_modules/**/*',
-    '!./package-lock.json'
-  ])
+let maxErrors = 0
+let minLinesByFile = 1
+let maxLinesByFile = 300
+let scanPaths = ['./**/*']
+
+const list = val => {
+  return val.split(',')
+}
+
+program
+  .version('0.1.0', '-v, --version')
+  .option('--maxlines <maxlines>', `Maximum lines by file. Default: ${maxLinesByFile}`, parseInt)
+  .option('--minlines <minlines>', `Maximum lines by file. Default: ${minLinesByFile}`, parseInt)
+  .option('--maxerrors <maxerrors>', `Maximum errors accept. Default: ${maxErrors}`, parseInt)
+  .option('--path <path>', 'Globby paths to scan', list)
+  .option('--ignore <ignore>', 'Globby paths to ignore', list)
+  .parse(process.argv)
+
+program.maxerrors && (maxErrors = program.maxerrors)
+program.maxlines && (maxLinesByFile = program.maxlines)
+program.minlines && (minLinesByFile = program.minlines)
+program.path && (scanPaths = program.path)
+
+const init = async () => {
+  const paths = await globby(scanPaths)
 
   let totalLines = 0
   let totalErrors = 0
@@ -25,27 +39,33 @@ const maxlinesByFile = 250;
     countLinesInFile(file, (error, numberOfLines) => {
       currentTotalFiles += 1
       totalLines += numberOfLines
-      numberOfLines > maxlinesByFile && (totalErrors += 1)
+      numberOfLines > maxLinesByFile && (totalErrors += 1)
 
       if (error) {
-        return console.error(error)
+        console.error(error)
       }
 
       const message = `${numberOfLines} ${chalk.underline(path.resolve(__dirname, file))}`
-      const color = numberOfLines > maxlinesByFile ? chalk.red(message) : chalk.green(message)
+      // const color = (numberOfLines > maxLinesByFile || numberOfLines <= minLinesByFile) ? 'red' : 'green'
 
-      // console.log(chalk.underline.red(path.resolve(__dirname, file)))
-      console.log(color)
+      // console.log(chalk[color](message))
+
+      if (numberOfLines > maxLinesByFile || numberOfLines < minLinesByFile) {
+        console.log(chalk.red(message))
+      }
 
       if (currentTotalFiles === paths.length) {
         console.log('\x1b[0m', `Total Files: ${paths.length}`)
         console.log('\x1b[0m', `Total Lines: ${totalLines}`)
-        console.log('\x1b[0m', `Max Errors: ${maxErrors} Found Errors: ${totalErrors}`)
+        console.log('\x1b[0m', `Max lines by file: ${maxLinesByFile}`)
+        console.log('\x1b[0m', `Max Errors: ${maxErrors} Founded Errors: ${totalErrors}`)
+
+        if (totalErrors > maxErrors) {
+          process.exit(1)
+        }
       }
-
-      const checkError = totalErrors > maxErrors ? 1 : void 0
-
-      return checkError
     })
   })
-})()
+}
+
+init()
