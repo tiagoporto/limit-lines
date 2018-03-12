@@ -6,7 +6,6 @@
 [![devDependencies Status](https://david-dm.org/tiagoporto/limit-lines/dev-status.svg)](https://david-dm.org/tiagoporto/limit-lines#info=devDependencies)
 [![NPM Downloads](https://img.shields.io/npm/dt/limit-lines.svg)](https://www.npmjs.com/package/limit-lines)
 [![Github Release](https://img.shields.io/github/release/tiagoporto/limit-lines.svg)](https://github.com/tiagoporto/limit-lines/releases)
-[![Github Issues](https://img.shields.io/github/issues/tiagoporto/limit-lines.svg)](https://github.com/tiagoporto/limit-lines/issues)
 [![Github License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
 
 
@@ -20,7 +19,7 @@ $ npm i limit-lines
 
 ## Execute
 ```
-$ limitline [options]
+$ limitlines [options]
 ```
 
 
@@ -30,35 +29,35 @@ $ limitline [options]
 String, separate by comma
 Globby paths to scan
 ```
-$ limitline --path './folder1/*, ./folder2/**/*'
+$ limitlines --path './folder1/*, ./folder2/**/*'
 ```
 
 ### Ignore
 String, separate by comma
 Paths to ignore. Default: `./**/*`
 ```
-$ limitline --path './**/*' --ignore './node_modules'
+$ limitlines --path './**/*' --ignore './node_modules'
 ```
 
 ### Maxlines
 Integer
 Maximum lines by file. Default: 300
 ```
-$ limitline --maxlines 450
+$ limitlines --maxlines 450
 ```
 
 ### Minlines
 Integer
 Minimun lines by file. Default: 1
 ```
-$ limitline --minlines 1
+$ limitlines --minlines 1
 ```
 
 ### Maxerrors
 Integer
 Maximum errors accept. Default: 0
 ```
-$ limitline --maxerrors 3
+$ limitlines --maxerrors 3
 ```
 
 ### Version
@@ -66,7 +65,7 @@ Output the version number
 Alias `-v`
 
 ```
-$ limitline --version
+$ limitlines --version
 ```
 
 

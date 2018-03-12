@@ -4,7 +4,7 @@
     "version": "1.0.0-alpha",
     "main": "./index.js",
     "bin": {
-        "limitline": "./index.js "
+        "limitlines": "./index.js "
     },
     "scripts": {
         "lint": "eslint ./index.js"
@@ -13,15 +13,16 @@
         "chalk": "^2.3.2",
         "commander": "^2.15.0",
         "count-lines-in-file": "^1.1.0",
-        "eslint-plugin-import": "^2.9.0",
-        "eslint-plugin-node": "^6.0.1",
-        "eslint-plugin-promise": "^3.7.0",
-        "eslint-plugin-standard": "^3.0.1",
         "globby": "^8.0.1"
     },
     "devDependencies": {
         "babel-preset-env": "^1.6.1",
         "eslint": "^4.18.2",
+        "eslint-plugin-import": "^2.9.0",
+        "eslint-plugin-node": "^6.0.1",
+        "eslint-plugin-promise": "^3.7.0",
+        "eslint-plugin-standard": "^3.0.1",
         "eslint-config-standard": "^11.0.0"
-    }
+    },
+    "license": "MIT"
 }
