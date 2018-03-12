@@ -4,6 +4,7 @@ const globby = require('globby')
 const path = require('path')
 const chalk = require('chalk')
 const program = require('commander')
+const version = require('./package.json').version
 
 let maxErrors = 0
 let minLinesByFile = 1
@@ -15,11 +16,11 @@ const list = val => {
 }
 
 program
-  .version('0.1.0', '-v, --version')
+  .version(version, '-v, --version')
   .option('--maxlines <maxlines>', `Maximum lines by file. Default: ${maxLinesByFile}`, parseInt)
-  .option('--minlines <minlines>', `Maximum lines by file. Default: ${minLinesByFile}`, parseInt)
+  .option('--minlines <minlines>', `Minimum lines by file. Default: ${minLinesByFile}`, parseInt)
   .option('--maxerrors <maxerrors>', `Maximum errors accept. Default: ${maxErrors}`, parseInt)
-  .option('--path <path>', 'Globby paths to scan', list)
+  .option('--path <path>', `Globby paths to scan. Default: ${scanPaths}`, list)
   .option('--ignore <ignore>', 'Globby paths to ignore', list)
   .parse(process.argv)
 
