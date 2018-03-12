@@ -27,6 +27,11 @@ program.maxerrors && (maxErrors = program.maxerrors)
 program.maxlines && (maxLinesByFile = program.maxlines)
 program.minlines && (minLinesByFile = program.minlines)
 program.path && (scanPaths = program.path)
+if (program.ignore) {
+  program.ignore.forEach(path => {
+    scanPaths.push(`!${path}`)
+  })
+}
 
 const init = async () => {
   const paths = await globby(scanPaths)
@@ -39,7 +44,6 @@ const init = async () => {
     countLinesInFile(file, (error, numberOfLines) => {
       currentTotalFiles += 1
       totalLines += numberOfLines
-      numberOfLines > maxLinesByFile && (totalErrors += 1)
 
       if (error) {
         console.error(error)
@@ -51,14 +55,22 @@ const init = async () => {
       // console.log(chalk[color](message))
 
       if (numberOfLines > maxLinesByFile || numberOfLines < minLinesByFile) {
+        totalErrors += 1
         console.log(chalk.red(message))
       }
 
       if (currentTotalFiles === paths.length) {
-        console.log('\x1b[0m', `Total Files: ${paths.length}`)
-        console.log('\x1b[0m', `Total Lines: ${totalLines}`)
-        console.log('\x1b[0m', `Max lines by file: ${maxLinesByFile}`)
-        console.log('\x1b[0m', `Max Errors: ${maxErrors} Founded Errors: ${totalErrors}`)
+        console.log('')
+        console.log(chalk.dim(`Total Files: ${paths.length}`))
+        console.log(chalk.dim(`Total Lines: ${totalLines}`))
+        console.log(chalk.dim(`Min lines by file: ${minLinesByFile}`))
+        console.log(chalk.dim(`Max lines by file: ${maxLinesByFile}`))
+
+        let color = 'reset'
+        totalErrors > maxErrors && (color = 'red');
+        (totalErrors > 0 && totalErrors < maxErrors) && (color = 'yellow')
+
+        console.log(chalk[color](`Max Errors: ${maxErrors} Founded Errors: ${totalErrors}`))
 
         if (totalErrors > maxErrors) {
           process.exit(1)
