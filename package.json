@@ -1,5 +1,6 @@
 {
     "name": "limit-lines",
+    "description": "A tool for check and report lines by file.",
     "repository": "https://github.com/Hotmart-Org/hot-vulcano",
     "version": "1.0.0-alpha",
     "main": "./index.js",
