@@ -27,16 +27,16 @@ $ limitlines [options]
 
 ### Path
 String, separate by comma
-Globby paths to scan
+Globby paths to scan Default: `./`
 ```
-$ limitlines --path './folder1/*, ./folder2/**/*'
+$ limitlines --path './folder1/**/*, ./folder2/*.{html,js}'
 ```
 
 ### Ignore
 String, separate by comma
-Paths to ignore. Default: `./**/*`
+Paths to ignore. Default: `./node_modules`
 ```
-$ limitlines --path './**/*' --ignore './node_modules'
+$ limitlines --ignore './somefolder'
 ```
 
 ### Maxlines

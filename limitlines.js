@@ -9,10 +9,10 @@ const version = require('./package.json').version
 let maxErrors = 0
 let minLinesByFile = 1
 let maxLinesByFile = 300
-let scanPaths = ['./**/*']
+let scanPaths = ['.']
 
 const list = val => {
-  return val.split(',')
+  return val.split(', ')
 }
 
 program
@@ -28,11 +28,14 @@ program.maxerrors && (maxErrors = program.maxerrors)
 program.maxlines && (maxLinesByFile = program.maxlines)
 program.minlines && (minLinesByFile = program.minlines)
 program.path && (scanPaths = program.path)
+
 if (program.ignore) {
   program.ignore.forEach(path => {
     scanPaths.push(`!${path}`)
   })
 }
+scanPaths.push('!./node_modules')
+console.log("scanPaths", scanPaths);
 
 const init = async () => {
   const paths = await globby(scanPaths)
@@ -50,7 +53,7 @@ const init = async () => {
         console.error(error)
       }
 
-      const message = `${numberOfLines} ${chalk.underline(path.resolve(__dirname, file))}`
+      const message = `${numberOfLines} ${chalk.underline(path.resolve(file))}`
       // const color = (numberOfLines > maxLinesByFile || numberOfLines <= minLinesByFile) ? 'red' : 'green'
 
       // console.log(chalk[color](message))

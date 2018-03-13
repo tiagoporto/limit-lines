@@ -1,6 +1,6 @@
 {
     "name": "limit-lines",
-    "version": "1.0.0-alpha.1",
+    "version": "1.0.0-alpha.2",
     "description": "A tool for check and report lines by file.",
     "keywords": [
         "lines",
@@ -9,10 +9,10 @@
         "max lines",
         "min lines",
         "report"
-      ],
+    ],
     "author": {
-      "name": "Tiago Porto",
-      "url": "http://tiagoporto.com"
+        "name": "Tiago Porto",
+        "url": "http://tiagoporto.com"
     },
     "repository": "https://github.com/Hotmart-Org/hot-vulcano",
     "main": "./limitlines.js",
