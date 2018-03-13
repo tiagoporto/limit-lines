@@ -1,14 +1,26 @@
 {
     "name": "limit-lines",
+    "version": "1.0.0-alpha.1",
     "description": "A tool for check and report lines by file.",
+    "keywords": [
+        "lines",
+        "files",
+        "lines by files",
+        "max lines",
+        "min lines",
+        "report"
+      ],
+    "author": {
+      "name": "Tiago Porto",
+      "url": "http://tiagoporto.com"
+    },
     "repository": "https://github.com/Hotmart-Org/hot-vulcano",
-    "version": "1.0.0-alpha",
-    "main": "./index.js",
+    "main": "./limitlines.js",
     "bin": {
-        "limitlines": "./index.js "
+        "limitlines": "./limitlines.js"
     },
     "scripts": {
-        "lint": "eslint ./index.js"
+        "lint": "eslint ./limitlines"
     },
     "dependencies": {
         "chalk": "^2.3.2",
