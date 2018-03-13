@@ -5,7 +5,7 @@
 [![Dependencies Status](https://david-dm.org/tiagoporto/limit-lines.svg)](https://david-dm.org/tiagoporto/limit-lines)
 [![devDependencies Status](https://david-dm.org/tiagoporto/limit-lines/dev-status.svg)](https://david-dm.org/tiagoporto/limit-lines#info=devDependencies)
 [![NPM Downloads](https://img.shields.io/npm/dt/limit-lines.svg)](https://www.npmjs.com/package/limit-lines)
-[![Github Release](https://img.shields.io/github/release/tiagoporto/limit-lines.svg)](https://github.com/tiagoporto/limit-lines/releases)
+[![NPM version](https://badge.fury.io/js/limit-lines.svg)](https://npmjs.org/package/limit-lines)
 [![Github License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
 
 

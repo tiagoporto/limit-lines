@@ -35,7 +35,6 @@ if (program.ignore) {
   })
 }
 scanPaths.push('!./node_modules')
-console.log("scanPaths", scanPaths);
 
 const init = async () => {
   const paths = await globby(scanPaths)
