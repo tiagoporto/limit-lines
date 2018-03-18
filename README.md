@@ -1,12 +1,16 @@
-# Limit Lines
+# Limit Lines ![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)
 
-[![Build Status](https://travis-ci.org/tiagoporto/limit-lines.svg)](https://travis-ci.org/tiagoporto/limit-lines)
-[![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limit-lines.svg)](https://coveralls.io/github/tiagoporto/limit-lines)
-[![Dependencies Status](https://david-dm.org/tiagoporto/limit-lines.svg)](https://david-dm.org/tiagoporto/limit-lines)
-[![devDependencies Status](https://david-dm.org/tiagoporto/limit-lines/dev-status.svg)](https://david-dm.org/tiagoporto/limit-lines#info=devDependencies)
-[![NPM Downloads](https://img.shields.io/npm/dt/limit-lines.svg)](https://www.npmjs.com/package/limit-lines)
-[![NPM version](https://badge.fury.io/js/limit-lines.svg)](https://npmjs.org/package/limit-lines)
-[![Github License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
+<p align="right">
+  <code>LIKED ? Leave a <a href="https://github.com/tiagoporto/limit-lines">⭐</a> : 😞</code>
+</p>
+
+[![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=version)](https://npmjs.org/package/limit-lines)
+[![Downloads](https://img.shields.io/npm/dt/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
+[![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
+<!-- [![Build Status](https://img.shields.io/travis/tiagoporto/limit-lines.svg?style=flat-square&logo=travis)](https://travis-ci.org/tiagoporto/limit-lines) -->
+<!-- [![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limit-lines.svg)](https://coveralls.io/github/tiagoporto/limit-lines) -->
+[![Dependencies Status](https://img.shields.io/david/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines)
+[![devDependencies Status](https://img.shields.io/david/dev/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines#info=devDependencies)
 
 
 A tool for check and report lines by file.
