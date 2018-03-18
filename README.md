@@ -4,7 +4,7 @@
   <code>LIKED ? Leave a <a href="https://github.com/tiagoporto/limit-lines">⭐</a> : 😞</code>
 </p>
 
-[![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=version)](https://npmjs.org/package/limit-lines)
+[![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=release)](https://github.com/tiagoporto/limit-lines/releases)
 [![Downloads](https://img.shields.io/npm/dt/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
 [![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
 [![Dependencies Status](https://img.shields.io/david/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines)
