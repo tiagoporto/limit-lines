@@ -6,7 +6,7 @@
 
 [![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=release)](https://github.com/tiagoporto/limit-lines/releases)
 [![Downloads](https://img.shields.io/npm/dt/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
-[![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
+[![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg?style=flat-square)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
 [![Dependencies Status](https://img.shields.io/david/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines)
 [![devDependencies Status](https://img.shields.io/david/dev/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines#info=devDependencies)
 <!-- [![Build Status](https://img.shields.io/travis/tiagoporto/limit-lines.svg?style=flat-square&logo=travis)](https://travis-ci.org/tiagoporto/limit-lines) -->
