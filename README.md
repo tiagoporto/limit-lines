@@ -22,7 +22,7 @@ npm install limit-lines
 
 
 ## Execute
-```sh
+```console
 limitlines [options]
 ```
 
@@ -32,29 +32,29 @@ limitlines [options]
 ### Path
 String, separate by comma
 Globby paths to scan Default: `./`
-```zsh
+```console
 limitlines --path './folder1/**/*, ./folder2/*.{html,js}'
 ```
 
 ### Ignore
 String, separate by comma
 Paths to ignore. Default: `./node_modules`
-```
+```console
 limitlines --ignore './somefolder'
 ```
 
 ### Maxlines
 Integer
 Maximum lines by file. Default: 300
-```
+```console
 limitlines --maxlines 450
 ```
 
 ### Minlines
 Integer
 Minimun lines by file. Default: 1
-```
-$ limitlines --minlines 1
+```console
+limitlines --minlines 1
 ```
 
 ### Maxerrors
