@@ -22,7 +22,7 @@ npm install limit-lines
 
 
 ## Execute
-```Shell
+```sh
 limitlines [options]
 ```
 
@@ -32,7 +32,7 @@ limitlines [options]
 ### Path
 String, separate by comma
 Globby paths to scan Default: `./`
-```
+```zsh
 limitlines --path './folder1/**/*, ./folder2/*.{html,js}'
 ```
 
