@@ -16,14 +16,14 @@
 A tool for check and report lines by file.
 
 ## Installation
-```
-$ npm i limit-lines
+```sh
+npm i limit-lines
 ```
 
 
 ## Execute
 ```
-$ limitlines [options]
+limitlines [options]
 ```
 
 
@@ -33,21 +33,21 @@ $ limitlines [options]
 String, separate by comma
 Globby paths to scan Default: `./`
 ```
-$ limitlines --path './folder1/**/*, ./folder2/*.{html,js}'
+limitlines --path './folder1/**/*, ./folder2/*.{html,js}'
 ```
 
 ### Ignore
 String, separate by comma
 Paths to ignore. Default: `./node_modules`
 ```
-$ limitlines --ignore './somefolder'
+limitlines --ignore './somefolder'
 ```
 
 ### Maxlines
 Integer
 Maximum lines by file. Default: 300
 ```
-$ limitlines --maxlines 450
+limitlines --maxlines 450
 ```
 
 ### Minlines
