@@ -16,13 +16,13 @@
 A tool for check and report lines by file.
 
 ## Installation
-```console
+```
 npm install limit-lines
 ```
 
 
 ## Execute
-```console
+```
 limitlines [options]
 ```
 
@@ -32,28 +32,28 @@ limitlines [options]
 ### Path
 String, separate by comma
 Globby paths to scan Default: `./`
-```console
+```
 limitlines --path './folder1/**/*, ./folder2/*.{html,js}'
 ```
 
 ### Ignore
 String, separate by comma
 Paths to ignore. Default: `./node_modules`
-```console
+```
 limitlines --ignore './somefolder'
 ```
 
 ### Maxlines
 Integer
 Maximum lines by file. Default: 300
-```console
+```
 limitlines --maxlines 450
 ```
 
 ### Minlines
 Integer
 Minimun lines by file. Default: 1
-```console
+```
 limitlines --minlines 1
 ```
 
@@ -61,15 +61,16 @@ limitlines --minlines 1
 Integer
 Maximum errors accept. Default: 0
 ```
-$ limitlines --maxerrors 3
+limitlines --maxerrors 3
 ```
 
 ### Version
 Output the version number
+
 Alias `-v`
 
 ```
-$ limitlines --version
+limitlines --version
 ```
 
 
