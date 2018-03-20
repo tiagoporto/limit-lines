@@ -13,7 +13,7 @@
 <!-- [![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limit-lines.svg)](https://coveralls.io/github/tiagoporto/limit-lines) -->
 
 
-A tool for check and report lines by file.
+> A tool for check and report lines by file.
 
 ## Installation
 ```
