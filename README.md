@@ -16,13 +16,13 @@
 A tool for check and report lines by file.
 
 ## Installation
-```sh
-npm i limit-lines
+```console
+npm install limit-lines
 ```
 
 
 ## Execute
-```
+```Shell
 limitlines [options]
 ```
 
