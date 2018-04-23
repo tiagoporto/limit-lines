@@ -23,7 +23,7 @@
     "limitlines": "./limitlines.js"
   },
   "scripts": {
-    "lint": "eslint ./limitlines.js"
+    "lint": "eslint ./limitlines.js",
     "prepublish": "npm run lint"
   },
   "dependencies": {
