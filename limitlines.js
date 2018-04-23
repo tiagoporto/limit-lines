@@ -34,7 +34,7 @@ if (program.ignore) {
     scanPaths.push(`!${path}`)
   })
 }
-scanPaths.push('!./node_modules')
+scanPaths.push('!node_modules')
 
 const init = async () => {
   const paths = await globby(scanPaths)
@@ -42,6 +42,9 @@ const init = async () => {
   let totalLines = 0
   let totalErrors = 0
   let currentTotalFiles = 0
+
+  console.log(chalk.inverse('[Init Limit Lines]'))
+  console.log(chalk.inverse.underline('Docs: https://github.com/tiagoporto/limit-lines'))
 
   paths.forEach(file => {
     countLinesInFile(file, (error, numberOfLines) => {
@@ -53,27 +56,27 @@ const init = async () => {
       }
 
       const message = `${numberOfLines} ${chalk.underline(path.resolve(file))}`
-      // const color = (numberOfLines > maxLinesByFile || numberOfLines <= minLinesByFile) ? 'red' : 'green'
-
-      // console.log(chalk[color](message))
 
       if (numberOfLines > maxLinesByFile || numberOfLines < minLinesByFile) {
         totalErrors += 1
-        console.log(chalk.red(message))
+        console.log(chalk.reset('Lines by file:'), chalk.red(message))
       }
 
       if (currentTotalFiles === paths.length) {
         console.log('')
-        console.log(chalk.dim(`Total Files: ${paths.length}`))
-        console.log(chalk.dim(`Total Lines: ${totalLines}`))
-        console.log(chalk.dim(`Min lines by file: ${minLinesByFile}`))
-        console.log(chalk.dim(`Max lines by file: ${maxLinesByFile}`))
+        console.log(chalk(`Total Files: ${paths.length}`))
+        console.log(chalk(`Total Lines: ${totalLines}`))
+        console.log(chalk(`Min lines by file: ${minLinesByFile}`))
+        console.log(chalk(`Max lines by file: ${maxLinesByFile}`))
 
         let color = 'reset'
         totalErrors > maxErrors && (color = 'red');
-        (totalErrors > 0 && totalErrors < maxErrors) && (color = 'yellow')
+        (totalErrors > 0 && totalErrors <= maxErrors) && (color = 'yellow')
 
         console.log(chalk[color](`Max Errors: ${maxErrors} Founded Errors: ${totalErrors}`))
+        if (color !== 'red') {
+          console.log(chalk.green(`Limit Lines Passed`))
+        }
 
         if (totalErrors > maxErrors) {
           process.exit(1)
