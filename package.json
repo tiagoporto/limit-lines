@@ -24,6 +24,7 @@
   },
   "scripts": {
     "lint": "eslint ./limitlines.js"
+    "prepublish": "npm run lint"
   },
   "dependencies": {
     "chalk": "^2.4.0",
