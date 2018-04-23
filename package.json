@@ -1,44 +1,44 @@
 {
-    "name": "limit-lines",
-    "version": "1.0.0-alpha.3",
-    "description": "A tool for check and report lines by file.",
-    "keywords": [
-        "lines",
-        "files",
-        "lines by files",
-        "max lines",
-        "min lines",
-        "report"
-    ],
-    "author": {
-        "name": "Tiago Porto",
-        "url": "http://tiagoporto.com"
-    },
-    "repository": {
+  "name": "limit-lines",
+  "version": "1.0.0-alpha.3",
+  "description": "A tool for check and report lines by file.",
+  "keywords": [
+    "lines",
+    "files",
+    "lines by files",
+    "max lines",
+    "min lines",
+    "report"
+  ],
+  "author": {
+    "name": "Tiago Porto",
+    "url": "http://tiagoporto.com"
+  },
+  "repository": {
     "type": "git",
     "url": "https://github.com/tiagoporto/limit-lines.git"
   },
-    "main": "./limitlines.js",
-    "bin": {
-        "limitlines": "./limitlines.js"
-    },
-    "scripts": {
-        "lint": "eslint ./limitlines"
-    },
-    "dependencies": {
-        "chalk": "^2.3.2",
-        "commander": "^2.15.0",
-        "count-lines-in-file": "^1.1.0",
-        "globby": "^8.0.1"
-    },
-    "devDependencies": {
-        "babel-preset-env": "^1.6.1",
-        "eslint": "^4.18.2",
-        "eslint-plugin-import": "^2.9.0",
-        "eslint-plugin-node": "^6.0.1",
-        "eslint-plugin-promise": "^3.7.0",
-        "eslint-plugin-standard": "^3.0.1",
-        "eslint-config-standard": "^11.0.0"
-    },
-    "license": "MIT"
+  "main": "./limitlines.js",
+  "bin": {
+    "limitlines": "./limitlines.js"
+  },
+  "scripts": {
+    "lint": "eslint ./limitlines"
+  },
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "commander": "^2.15.0",
+    "count-lines-in-file": "^1.1.0",
+    "globby": "^8.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.2",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-config-standard": "^11.0.0"
+  },
+  "license": "MIT"
 }
