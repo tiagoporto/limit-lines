@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict'
 const countLinesInFile = require('count-lines-in-file')
 const globby = require('globby')
 const path = require('path')
@@ -36,9 +37,7 @@ if (program.ignore) {
 }
 scanPaths.push('!node_modules')
 
-const init = async () => {
-  const paths = await globby(scanPaths)
-
+globby(scanPaths).then(paths => {
   let totalLines = 0
   let totalErrors = 0
   let currentTotalFiles = 0
@@ -84,6 +83,4 @@ const init = async () => {
       }
     })
   })
-}
-
-init()
+}).catch(err => console.error(err))
