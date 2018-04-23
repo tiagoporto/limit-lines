@@ -1,6 +1,6 @@
 {
   "name": "limit-lines",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "A tool for check and report lines by file.",
   "keywords": [
     "lines",
