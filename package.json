@@ -23,7 +23,7 @@
     "limitlines": "./limitlines.js"
   },
   "scripts": {
-    "lint": "eslint ./limitlines"
+    "lint": "eslint ./limitlines.js"
   },
   "dependencies": {
     "chalk": "^2.4.0",
@@ -32,7 +32,6 @@
     "globby": "^8.0.1"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.6.1",
     "eslint": "^4.18.2",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
