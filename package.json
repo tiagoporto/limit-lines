@@ -27,9 +27,9 @@
   },
   "scripts": {
     "lint": "eslint ./limitlines.js",
-    "tag": "git tag -a v$npm_package_version -m 'v$npm_package_version'",
+    "tag": "git tag v$npm_package_version",
     "prepublish": "npm run lint",
-    "postpublish": "npm run tag & git push --tags"
+    "postpublish": "npm run tag && git push --tags"
   },
   "dependencies": {
     "chalk": "^2.4.0",
