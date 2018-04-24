@@ -5,6 +5,7 @@
 </p>
 
 [![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=release)](https://github.com/tiagoporto/limit-lines/releases)
+[![Node](https://img.shields.io/node/v/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
 [![Downloads](https://img.shields.io/npm/dt/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
 [![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg?style=flat-square)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
 [![Dependencies Status](https://img.shields.io/david/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines)
@@ -30,36 +31,45 @@ limitlines [options]
 ## Options
 
 ### Path
-String, separate by comma
-Globby paths to scan Default: `./`
+`string`, separate by comma.
+
+ accept [globby](https://github.com/sindresorhus/globby) paths.
+
+Default: `.`
 ```
-limitlines --path './folder1/**/*, ./folder2/*.{html,js}'
+limitlines --path 'folder1/**/*, folder2/*.{html,js}'
 ```
 
 ### Ignore
-String, separate by comma
-Paths to ignore. Default: `./node_modules`
+`string`, separate by comma
+
+Paths to ignore.
+
+Default: `node_modules`
 ```
-limitlines --ignore './somefolder'
+limitlines --ignore 'somefolder'
 ```
 
 ### Maxlines
-Integer
-Maximum lines by file. Default: 300
+`integer`
+
+Maximum lines by file. Default: `300`
 ```
 limitlines --maxlines 450
 ```
 
 ### Minlines
-Integer
-Minimun lines by file. Default: 1
+`integer`
+
+Minimun accepted lines by file. Default: 1
 ```
 limitlines --minlines 1
 ```
 
 ### Maxerrors
-Integer
-Maximum errors accept. Default: 0
+`integer`
+
+Maximum errors accept. Default: `0`
 ```
 limitlines --maxerrors 3
 ```
