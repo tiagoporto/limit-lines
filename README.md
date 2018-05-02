@@ -10,6 +10,7 @@
 [![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg?style=flat-square)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
 [![Dependencies Status](https://img.shields.io/david/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines)
 [![devDependencies Status](https://img.shields.io/david/dev/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines#info=devDependencies)
+[![Inline docs](http://inch-ci.org/github/tiagoporto/limit-lines.svg?branch=master&style=flat-square)](http://inch-ci.org/github/tiagoporto/limit-lines)
 <!-- [![Build Status](https://img.shields.io/travis/tiagoporto/limit-lines.svg?style=flat-square&logo=travis)](https://travis-ci.org/tiagoporto/limit-lines) -->
 <!-- [![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limit-lines.svg)](https://coveralls.io/github/tiagoporto/limit-lines) -->
 
