@@ -1,7 +1,7 @@
 # Limit Lines ![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)
 
 <p align="right">
-  <code>LIKED ? Leave a <a href="https://github.com/tiagoporto/limit-lines">⭐</a> : <a href="https://github.com/tiagoporto/limit-lines/issues">😞</a></code>
+  <code>LIKED ? Leave a <a href="https://github.com/tiagoporto/limit-lines/stargazers">⭐</a> : <a href="https://github.com/tiagoporto/limit-lines/issues">😞</a></code>
 </p>
 
 [![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=release)](https://github.com/tiagoporto/limit-lines/releases)
