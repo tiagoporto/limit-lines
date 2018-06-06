@@ -17,6 +17,9 @@
 
 > A tool for check and report lines by file.
 
+![Screenshot](Screenshot.png)
+
+
 ## Installation
 ```
 npm install limit-lines
