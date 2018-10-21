@@ -32,8 +32,8 @@
     "postpublish": "npm run tag && git push --tags"
   },
   "dependencies": {
-    "chalk": "^2.4.0",
-    "commander": "^2.15.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.19.0",
     "count-lines-in-file": "^1.1.0",
     "globby": "^8.0.1"
   },
