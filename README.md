@@ -1,4 +1,4 @@
-# Limit Lines ![Open Source Love](https://github.com/ellerbrock/open-source-badges/blob/master/badges/open-source-v3/open-source.svg) ![Bash Shell](https://badges.frapsoft.com/bash/v1/bash-150x25.png?v=103)
+# Limit Lines ![Open Source Love](https://github.com/ellerbrock/open-source-badges/blob/master/badges/open-source-v3/open-source.svg) <img src="https://badges.frapsoft.com/bash/v1/bash-150x25.png?v=103" alt="Bash Shell" width="120">
 
 <p align="right">
   <code>LIKED ? Leave a <a href="https://github.com/tiagoporto/limit-lines/stargazers">⭐</a> : <a href="https://github.com/tiagoporto/limit-lines/issues">😞</a></code>
