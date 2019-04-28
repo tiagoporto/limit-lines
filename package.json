@@ -1,6 +1,6 @@
 {
   "name": "limit-lines",
-  "version": "1.0.0-alpha.5",
+  "version": "1.0.0",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -27,23 +27,23 @@
   },
   "scripts": {
     "lint": "eslint ./limitlines.js",
+    "prepare": "npm run lint",
     "tag": "git tag v$npm_package_version",
-    "prepublish": "npm run lint",
     "postpublish": "npm run tag && git push --tags"
   },
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
     "count-lines-in-file": "^1.1.0",
-    "globby": "^8.0.1"
+    "globby": "^9.2.0"
   },
   "devDependencies": {
-    "eslint": "^4.18.2",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-config-standard": "^11.0.0"
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
   },
   "license": "MIT"
 }
