@@ -19,7 +19,7 @@
 [![Inline docs](http://inch-ci.org/github/tiagoporto/limit-lines.svg?branch=master&style=flat-square)](http://inch-ci.org/github/tiagoporto/limit-lines)
 [![devDependencies Status](https://img.shields.io/david/dev/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines?type=dev)
 
-> A tool for check and report number of lines by file.
+> A CLI tool to check and report lines by file.
 
 ![Screenshot](Screenshot.png)
 
