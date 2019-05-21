@@ -4,7 +4,7 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "description": "A tool for check and report number of lines by file.  .",
+  "description": "A CLI tool to check and report number of lines by file.",
   "keywords": [
     "lines",
     "files",
