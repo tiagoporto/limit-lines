@@ -8,15 +8,14 @@
 [![Node](https://img.shields.io/node/v/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
 [![Downloads](https://img.shields.io/npm/dt/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
 [![install size](https://packagephobia.now.sh/badge?p=limit-lines)](https://packagephobia.now.sh/result?p=limit-lines)
-[![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg?style=flat-square)](https://raw.githubusercontent.com/tiagoporto/limit-lines/master/LICENSE)
+[![License](https://img.shields.io/github/license/tiagoporto/limit-lines.svg?style=flat-square)](https://raw.githubusercontent.com/tiagoporto/limit-lines/main/LICENSE)
 [![dependencies Status](https://img.shields.io/david/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines)
 
-<!-- [![Build Status](https://img.shields.io/travis/com/tiagoporto/limit-lines/master.svg?label=tests&logo=travis&style=flat-square)](https://travis-ci.com/tiagoporto/limit-lines) -->
+<!-- [![Build Status](https://img.shields.io/travis/com/tiagoporto/limit-lines/main.svg?label=tests&logo=travis&style=flat-square)](https://travis-ci.com/tiagoporto/limit-lines) -->
 <!-- [![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limit-lines.svg?style=flat-square)](https://coveralls.io/github/tiagoporto/limit-lines) -->
-<!-- [![Mutation testing cover](https://badge.stryker-mutator.io/github.com/tiagoporto/limit-lines/master)](https://stryker-mutator.github.io) -->
+<!-- [![Mutation testing cover](https://badge.stryker-mutator.io/github.com/tiagoporto/limit-lines/main)](https://stryker-mutator.github.io) -->
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-yellow.svg?style=flat-square)](http://standardjs.com)
-[![Inline docs](http://inch-ci.org/github/tiagoporto/limit-lines.svg?branch=master&style=flat-square)](http://inch-ci.org/github/tiagoporto/limit-lines)
 [![devDependencies Status](https://img.shields.io/david/dev/tiagoporto/limit-lines.svg?style=flat-square)](https://david-dm.org/tiagoporto/limit-lines?type=dev)
 
 > A CLI tool to check and report lines by file.
@@ -103,4 +102,4 @@ limitlines --version
 
 ## License
 
-Limit Lines is released under the terms of the [MIT license](https://github.com/tiagoporto/limit-lines/blob/master/LICENSE).
+Limit Lines is released under the terms of the [MIT license](https://github.com/tiagoporto/limit-lines/blob/main/LICENSE).
