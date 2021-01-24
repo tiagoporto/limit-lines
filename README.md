@@ -1,4 +1,4 @@
-# Limit Lines ![Open Source Love](https://github.com/ellerbrock/open-source-badges/blob/master/badges/open-source-v3/open-source.svg) <img src="https://badges.frapsoft.com/bash/v1/bash-150x25.png?v=103" alt="Bash Shell" width="120">
+# Limit Lines ![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg) <img src="https://badges.frapsoft.com/bash/v1/bash-150x25.png?v=103" alt="Bash Shell" width="120">
 
 <p align="right">
   <code>LIKED ? Leave a <a href="https://github.com/tiagoporto/limit-lines/stargazers">⭐</a> : <a href="https://github.com/tiagoporto/limit-lines/issues">😞</a></code>
@@ -20,17 +20,17 @@
 
 > A CLI tool to check and report lines by file.
 
-![Screenshot](Screenshot.png)
+![Screenshot](./Screenshot.png)
 
 ## Installation
 
-```
+```bash
 npm install limit-lines
 ```
 
 ## Execute
 
-```
+```bash
 limitlines [options]
 ```
 
@@ -44,7 +44,7 @@ accept [globby](https://github.com/sindresorhus/globby) paths.
 
 Default: `.`
 
-```
+```bash
 limitlines --path 'folder1/**/*, folder2/*.{html,js}'
 ```
 
@@ -56,7 +56,7 @@ Paths to ignore.
 
 Default: `node_modules`
 
-```
+```bash
 limitlines --ignore 'somefolder'
 ```
 
@@ -66,7 +66,7 @@ limitlines --ignore 'somefolder'
 
 Maximum lines by file. Default: `300`
 
-```
+```bash
 limitlines --maxlines 450
 ```
 
@@ -76,7 +76,7 @@ limitlines --maxlines 450
 
 Minimun accepted lines by file. Default: 1
 
-```
+```bash
 limitlines --minlines 1
 ```
 
@@ -86,7 +86,7 @@ limitlines --minlines 1
 
 Maximum errors accept. Default: `0`
 
-```
+```bash
 limitlines --maxerrors 3
 ```
 
@@ -96,7 +96,7 @@ Output the version number
 
 Alias `-v`
 
-```
+```bash
 limitlines --version
 ```
 
