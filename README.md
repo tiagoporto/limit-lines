@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./docs/logo.svg" alt="limit lines" width="600">
+  <img src="./docs/logo.svg" alt="limit lines" width="600">
 <p>
 
 ![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg) <img src="https://badges.frapsoft.com/bash/v1/bash-150x25.png?v=103" alt="Bash Shell" width="120">
