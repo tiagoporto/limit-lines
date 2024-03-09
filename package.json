@@ -37,7 +37,7 @@
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
     "count-lines-in-file": "^1.1.0",
-    "globby": "^9.2.0"
+    "globby": "^14.0.1"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
