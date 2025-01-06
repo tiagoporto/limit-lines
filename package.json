@@ -30,8 +30,8 @@
   "scripts": {
     "formatting:check": "prettier --check --ignore-unknown \"**/*\"",
     "formatting": "npm run formatting:check -- --write",
-    "lint": "eslint ./limitlines.js",
-    "prepare": "npm run lint",
+    "lint": "eslint --max-warnings 0",
+    "lint:fix": "npm run lint -- --write",
     "tag": "git tag v$npm_package_version",
     "postpublish": "npm run tag && git push --tags"
   },
@@ -44,14 +44,10 @@
   "devDependencies": {
     "@tiagoporto/dependabot-config": "^1.0.0",
     "@tiagoporto/editor-config": "^1.0.0",
+    "@tiagoporto/eslint-config": "^1.0.0",
     "@tiagoporto/prettier-config": "^1.0.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-standard": "^5.0.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
     "prettier": "^3.4.2"
   }
 }
