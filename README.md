@@ -10,8 +10,8 @@
 
 [![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=release)](https://github.com/tiagoporto/limit-lines/releases)
 [![Node](https://img.shields.io/node/v/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
-[![Downloads](https://img.shields.io/npm/dt/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
-[![install size](https://packagephobia.now.sh/badge?p=limit-lines)](https://packagephobia.now.sh/result?p=limit-lines)
+[![Downloads](https://img.shields.io/npm/d18m/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
+[![install size](https://packagephobia.com/badge?p=limit-lines)](https://packagephobia.com/result?p=limit-lines)
 
 <!-- [![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limit-lines.svg?style=flat-square)](https://coveralls.io/github/tiagoporto/limit-lines) -->
 <!-- [![Mutation testing cover](https://badge.stryker-mutator.io/github.com/tiagoporto/limit-lines/main)](https://stryker-mutator.github.io) -->
