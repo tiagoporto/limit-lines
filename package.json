@@ -1,6 +1,6 @@
 {
-  "name": "limit-lines",
-  "version": "1.0.0",
+  "name": "limitlines",
+  "version": "0.0.0-development",
   "description": "Lint and report number of lines by file",
   "keywords": [
     "lint",
@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tiagoporto/limit-lines.git"
+    "url": "https://github.com/tiagoporto/limitlines.git"
   },
   "funding": "https://github.com/sponsors/tiagoporto",
   "type": "module",

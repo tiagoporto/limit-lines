@@ -5,16 +5,16 @@
 ![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg) <img src="https://badges.frapsoft.com/bash/v1/bash-150x25.png?v=103" alt="Bash Shell" width="120">
 
 <p align="right">
-  <code> 👍 ? <a href="https://github.com/tiagoporto/limit-lines/stargazers">⭐</a> : <a href="https://github.com/tiagoporto/limit-lines/issues">😞</a></code>
+  <code> 👍 ? <a href="https://github.com/tiagoporto/limitlines/stargazers">⭐</a> : <a href="https://github.com/tiagoporto/limitlines/issues">😞</a></code>
 </p>
 
-[![Release](https://img.shields.io/npm/v/limit-lines.svg?style=flat-square&label=release)](https://github.com/tiagoporto/limit-lines/releases)
-[![Node](https://img.shields.io/node/v/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
-[![Downloads](https://img.shields.io/npm/d18m/limit-lines.svg?style=flat-square)](https://www.npmjs.com/package/limit-lines)
-[![install size](https://packagephobia.com/badge?p=limit-lines)](https://packagephobia.com/result?p=limit-lines)
+[![Release](https://img.shields.io/npm/v/limitlines.svg?style=flat-square&label=release)](https://github.com/tiagoporto/limitlines/releases)
+[![Node](https://img.shields.io/node/v/limitlines.svg?style=flat-square)](https://www.npmjs.com/package/limitlines)
+[![Downloads](https://img.shields.io/npm/d18m/limitlines.svg?style=flat-square)](https://www.npmjs.com/package/limitlines)
+[![install size](https://packagephobia.com/badge?p=limitlines)](https://packagephobia.com/result?p=limitlines)
 
-<!-- [![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limit-lines.svg?style=flat-square)](https://coveralls.io/github/tiagoporto/limit-lines) -->
-<!-- [![Mutation testing cover](https://badge.stryker-mutator.io/github.com/tiagoporto/limit-lines/main)](https://stryker-mutator.github.io) -->
+<!-- [![Coverage Status](https://img.shields.io/coveralls/tiagoporto/limitlines.svg?style=flat-square)](https://coveralls.io/github/tiagoporto/limitlines) -->
+<!-- [![Mutation testing cover](https://badge.stryker-mutator.io/github.com/tiagoporto/limitlines/main)](https://stryker-mutator.github.io) -->
 
 > Lint and report number of lines by file.
 
@@ -23,7 +23,7 @@
 ## Installation
 
 ```bash
-npm install limit-lines
+npm install limitlines
 ```
 
 ## Execute
@@ -100,4 +100,4 @@ limitlines --version
 
 ## License
 
-This project is licensed under the [MIT license](https://github.com/tiagoporto/limit-lines/blob/main/LICENSE).
+This project is licensed under the [MIT license](https://github.com/tiagoporto/limitlines/blob/main/LICENSE).

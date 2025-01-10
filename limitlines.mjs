@@ -60,9 +60,7 @@ globby(scanPaths)
 
     console.log(chalk.inverse('[Init Limit Lines]'))
     console.log(
-      chalk.inverse.underline(
-        'Docs: https://github.com/tiagoporto/limit-lines',
-      ),
+      chalk.inverse.underline('Docs: https://github.com/tiagoporto/limitlines'),
     )
 
     paths.forEach((file) => {
