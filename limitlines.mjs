@@ -1,49 +1,52 @@
 #!/usr/bin/env node
-'use strict'
-const countLinesInFile = require('count-lines-in-file')
-const globby = require('globby')
-const path = require('path')
-const chalk = require('chalk')
-const program = require('commander')
-const version = require('./package.json').version
+import fs from 'fs'
+import countLinesInFile from 'count-lines-in-file'
+import { globby } from 'globby'
+import path from 'path'
+import chalk from 'chalk'
+import { program } from 'commander'
 
-let maxErrors = 0
-let minLinesByFile = 1
-let maxLinesByFile = 300
-let scanPaths = ['.']
+const jsonData = fs.readFileSync('./package.json', 'utf8')
+const { version } = JSON.parse(jsonData)
 
 const list = (val) => {
   return val.split(', ')
 }
 
+const MAX_ERRORS = 0
+const MAX_LINES_BY_FILE = 300
+const MIN_LINES_BY_FILE = 1
+const PATHS = ['.']
+
 program
   .version(version, '-v, --version')
   .option(
     '--maxlines <maxlines>',
-    `Maximum lines by file. Default: ${maxLinesByFile}`,
+    `Maximum lines by file. Default: ${MAX_LINES_BY_FILE}`,
     parseInt,
   )
   .option(
     '--minlines <minlines>',
-    `Minimum lines by file. Default: ${minLinesByFile}`,
+    `Minimum lines by file. Default: ${MIN_LINES_BY_FILE}`,
     parseInt,
   )
   .option(
     '--maxerrors <maxerrors>',
-    `Maximum errors accept. Default: ${maxErrors}`,
+    `Maximum errors accept. Default: ${MAX_ERRORS}`,
     parseInt,
   )
-  .option('--path <path>', `Globby paths to scan. Default: ${scanPaths}`, list)
+  .option('--path <path>', `Globby paths to scan. Default: ${PATHS}`, list)
   .option('--ignore <ignore>', 'Globby paths to ignore', list)
   .parse(process.argv)
 
-program.maxerrors && (maxErrors = program.maxerrors)
-program.maxlines && (maxLinesByFile = program.maxlines)
-program.minlines && (minLinesByFile = program.minlines)
-program.path && (scanPaths = program.path)
+const { maxerrors, maxlines, minlines, path: paths, ignore } = program.opts()
+const maxErrors = maxerrors ? maxerrors : MAX_ERRORS
+const maxLinesByFile = maxlines ? maxlines : MAX_LINES_BY_FILE
+const minLinesByFile = minlines ? minlines : 1
+const scanPaths = paths ? paths : PATHS
 
-if (program.ignore) {
-  program.ignore.forEach((path) => {
+if (ignore) {
+  ignore.forEach((path) => {
     scanPaths.push(`!${path}`)
   })
 }
