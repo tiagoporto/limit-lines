@@ -100,4 +100,4 @@ limitlines --version
 
 ## License
 
-Limit Lines is released under the terms of the [MIT license](https://github.com/tiagoporto/limit-lines/blob/main/LICENSE).
+This project is licensed under the [MIT license](https://github.com/tiagoporto/limit-lines/blob/main/LICENSE).
