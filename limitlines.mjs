@@ -10,16 +10,26 @@ const jsonData = fs.readFileSync('./package.json', 'utf8')
 const { version } = JSON.parse(jsonData)
 
 const list = (val) => {
-  return val.split(', ')
+  return val.replace(/\s/g, '').split(',')
 }
 
 const MAX_ERRORS = 0
 const MAX_LINES_BY_FILE = 300
 const MIN_LINES_BY_FILE = 1
 const PATHS = ['.']
+let scanPaths
+
+program.version(version, '-v, --version')
 
 program
-  .version(version, '-v, --version')
+  .argument('[source]')
+  .description(`Globby paths to scan. Default: ${PATHS}`)
+  .action((globPath) => {
+    scanPaths = globPath ? list(globPath) : PATHS
+  })
+
+program
+  .option('--ignore <ignore>', 'Globby paths to ignore', list)
   .option(
     '--maxlines <maxlines>',
     `Maximum lines by file. Default: ${MAX_LINES_BY_FILE}`,
@@ -35,15 +45,13 @@ program
     `Maximum errors accept. Default: ${MAX_ERRORS}`,
     parseInt,
   )
-  .option('--path <path>', `Globby paths to scan. Default: ${PATHS}`, list)
-  .option('--ignore <ignore>', 'Globby paths to ignore', list)
-  .parse(process.argv)
 
-const { maxerrors, maxlines, minlines, path: paths, ignore } = program.opts()
+program.parse(process.argv)
+
+const { maxerrors, maxlines, minlines, ignore } = program.opts()
 const maxErrors = maxerrors ? maxerrors : MAX_ERRORS
 const maxLinesByFile = maxlines ? maxlines : MAX_LINES_BY_FILE
 const minLinesByFile = minlines ? minlines : 1
-const scanPaths = paths ? paths : PATHS
 
 if (ignore) {
   ignore.forEach((path) => {

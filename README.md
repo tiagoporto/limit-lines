@@ -29,28 +29,30 @@ npm install limitlines
 ## Execute
 
 ```bash
-limitlines [options]
+limitlines [source] [options]
+```
+
+### Source
+
+Globby paths to scan.
+
+`string`, separate by comma.
+
+Default: `.`
+
+Accept [globby](https://github.com/sindresorhus/globby).
+
+```bash
+limitlines 'folder1/**/*, folder2/*.{html,js}'
 ```
 
 ## Options
 
-### Path
-
-`string`, separate by comma.
-
-accept [globby](https://github.com/sindresorhus/globby) paths.
-
-Default: `.`
-
-```bash
-limitlines --path 'folder1/**/*, folder2/*.{html,js}'
-```
-
 ### Ignore
 
-`string`, separate by comma
-
 Paths to ignore.
+
+`string`, separate by comma.
 
 Default: `node_modules`
 
@@ -60,9 +62,11 @@ limitlines --ignore 'somefolder'
 
 ### Max Lines
 
+Maximum lines by file.
+
 `integer`
 
-Maximum lines by file. Default: `300`
+Default: `300`
 
 ```bash
 limitlines --maxlines 450
@@ -70,9 +74,11 @@ limitlines --maxlines 450
 
 ### Min Lines
 
+Minimun accepted lines by file.
+
 `integer`
 
-Minimun accepted lines by file. Default: 1
+Default: 1
 
 ```bash
 limitlines --minlines 1
@@ -80,9 +86,11 @@ limitlines --minlines 1
 
 ### Max Errors
 
+Maximum errors accept.
+
 `integer`
 
-Maximum errors accept. Default: `0`
+Default: `0`
 
 ```bash
 limitlines --maxerrors 3
@@ -90,9 +98,9 @@ limitlines --maxerrors 3
 
 ### Version
 
-Output version number
+Output version number.
 
-Alias `-v`
+Alias `-v`.
 
 ```bash
 limitlines --version
