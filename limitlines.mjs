@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import fs from 'fs'
-import countLinesInFile from 'count-lines-in-file'
-import { globby } from 'globby'
-import path from 'path'
 import chalk from 'chalk'
 import { program } from 'commander'
+import countLinesInFile from 'count-lines-in-file'
+import fs from 'fs'
+import { globby } from 'globby'
+import path from 'path'
 
 const jsonData = fs.readFileSync('./package.json', 'utf8')
 const { version } = JSON.parse(jsonData)
@@ -66,8 +66,8 @@ globby(scanPaths)
     let totalErrors = 0
     let currentTotalFiles = 0
 
-    console.log(chalk.inverse('[Init Limit Lines]'))
-    console.log(
+    console.info(chalk.inverse('[Init Limit Lines]'))
+    console.info(
       chalk.inverse.underline('Docs: https://github.com/tiagoporto/limitlines'),
     )
 
@@ -86,27 +86,27 @@ globby(scanPaths)
 
         if (numberOfLines > maxLinesByFile || numberOfLines < minLinesByFile) {
           totalErrors += 1
-          console.log(chalk.reset('Lines by file:'), chalk.red(message))
+          console.error(chalk.reset('Lines by file:'), chalk.red(message))
         }
 
         if (currentTotalFiles === paths.length) {
-          console.log('')
-          console.log(chalk(`Total Files: ${paths.length}`))
-          console.log(chalk(`Total Lines: ${totalLines}`))
-          console.log(chalk(`Min lines by file: ${minLinesByFile}`))
-          console.log(chalk(`Max lines by file: ${maxLinesByFile}`))
+          console.info('')
+          console.info(chalk(`Total Files: ${paths.length}`))
+          console.info(chalk(`Total Lines: ${totalLines}`))
+          console.info(chalk(`Min lines by file: ${minLinesByFile}`))
+          console.info(chalk(`Max lines by file: ${maxLinesByFile}`))
 
           let color = 'reset'
           totalErrors > maxErrors && (color = 'red')
           totalErrors > 0 && totalErrors <= maxErrors && (color = 'yellow')
 
-          console.log(
+          console.error(
             chalk[color](
               `Max Errors: ${maxErrors} Founded Errors: ${totalErrors}`,
             ),
           )
           if (color !== 'red') {
-            console.log(chalk.green('Limit Lines Passed'))
+            console.info(chalk.green('Limit Lines Passed'))
           }
 
           if (totalErrors > maxErrors) {
